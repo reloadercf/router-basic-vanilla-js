@@ -17,4 +17,5 @@ module.exports = {
     'quotes': 'off',
     'arrow-body-style': 'off',
   },
+  "parser": "babel-eslint",
 };
