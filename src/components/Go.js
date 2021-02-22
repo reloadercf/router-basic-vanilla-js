@@ -1,3 +1,6 @@
 export const Go = () => {
-  return `<div class="go"> Soy el go </div>`;
+  return `<div class="go">
+  <textarea id="message" placeholder="Comparte tu opinión!"></textarea>
+  <button id="send">Publicar</button>
+  </div>`;
 };

@@ -1,12 +1,14 @@
 import { Go } from '../components/Go.js';
+import { GoFunction } from '../utils/GoFunction.js';
 
 const buttonGo = document.getElementById('go');
 
-const GoHelper = (onNavigate) => {
+export const GoHelper = (onNavigate) => {
   buttonGo.addEventListener('click', () => {
     onNavigate('/vamos');
   });
+
   return Go();
 };
 
-export default GoHelper;
+export const seterGoFunction = () => GoFunction();

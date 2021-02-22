@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 import Home from './helpers/HomeHelper.js';
-import Go from './helpers/GoHelper.js';
+import { GoHelper, seterGoFunction } from './helpers/GoHelper.js';
 
 const rootDiv = document.getElementById('app');
 
@@ -11,10 +11,11 @@ const onNavigate = (pathname) => {
     window.location.origin + pathname,
   );
   rootDiv.innerHTML = routes[pathname];
+  seterGoFunction();
 };
 
 const welcome = Home(onNavigate);
-const letsGo = Go(onNavigate);
+const letsGo = GoHelper(onNavigate);
 
 const routes = {
   '/': welcome,
